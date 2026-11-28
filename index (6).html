@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>صحوة</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#FFF7E8;--ink:#2A2550;--mute:#6F6A94;--card:#fff;--line:#F1E2C6;--ac:#10B58C;--ac2:#6C5CE7;--warm:#FF8A3D;--red:#E5484D;--on:#fff;--wt:#fff;--b1:#FFE0B0;--b2:#C8F4E4;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1A1735;--ink:#F3F0FF;--mute:#A9A4D0;--card:#262250;--line:#383267;--ac:#3EE0B0;--ac2:#A99BFF;--warm:#FFB36B;--red:#FF7B80;--on:#10102A;--wt:#2A1500;--b1:#3B2F7A;--b2:#0F4B55}}
+:root[data-theme="dark"]{--bg:#1A1735;--ink:#F3F0FF;--mute:#A9A4D0;--card:#262250;--line:#383267;--ac:#3EE0B0;--ac2:#A99BFF;--warm:#FFB36B;--red:#FF7B80;--on:#10102A;--wt:#2A1500;--b1:#3B2F7A;--b2:#0F4B55}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}*{box-sizing:border-box}
+body{margin:0;background:radial-gradient(circle at 100% -5%,var(--b1) 0,transparent 42%),radial-gradient(circle at 0 28%,var(--b2) 0,transparent 38%),var(--bg);background-attachment:fixed;color:var(--ink);font:17px/1.7 "Tajawal",system-ui,-apple-system,"Segoe UI",Tahoma,sans-serif}
+main{max-width:480px;margin:0 auto;padding:16px 18px 110px}h1{font-size:27px;font-weight:800;margin:4px 0 0}h2{font-size:18px;margin:22px 0 8px}
+.sub,.mute{color:var(--mute)}.sub{margin:0 0 14px}.sec{display:none}.sec.on{display:block}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:12px 15px;margin:0 0 10px;box-shadow:0 4px 14px rgba(108,92,231,.1)}
+button{font:inherit;cursor:pointer;border:0;border-radius:14px;padding:13px 16px;font-weight:700;color:var(--ink);background:var(--card)}
+button:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid var(--ac);outline-offset:2px}
+.w{width:100%}.pri{background:linear-gradient(135deg,var(--ac),var(--ac2));color:var(--on)}.sos{background:linear-gradient(135deg,var(--warm),#FF5E7E);color:var(--wt);font-size:19px;padding:16px}button:disabled{opacity:.65;cursor:not-allowed}.cf{position:fixed;top:-30px;font-size:26px;z-index:9;pointer-events:none;animation:fall 2.4s linear forwards}@keyframes fall{to{transform:translateY(110vh) rotate(360deg);opacity:.3}}.ghost{background:transparent;color:var(--mute);border:1px solid var(--line);font-weight:500}.bad{color:var(--red)}
+.hero{display:flex;flex-direction:column;align-items:center;margin:6px 0 12px}.ring{position:relative;width:230px;height:230px}.ring svg{width:100%;height:100%;transform:rotate(-90deg)}
+.ring circle{fill:none;stroke-width:12;stroke-linecap:round}.tr{stroke:var(--line)}.pr{stroke:url(#g);transition:stroke-dashoffset .8s}
+.ctr{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center}.days{font-size:68px;font-weight:800;line-height:1;background:linear-gradient(135deg,var(--ac),var(--ac2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.tbs{display:flex;gap:8px;margin-top:12px}.tb{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:6px 14px;text-align:center;min-width:76px}.tb b{display:block;font-size:24px;font-variant-numeric:tabular-nums}.tb small{color:var(--mute)}.ring.big svg{display:none}.ring.big{height:160px}.ring.big .days{font-size:120px}
+.bar{height:10px;border-radius:6px;background:var(--ac);margin:3px 0 8px;min-width:4px}.chips button.on{background:var(--ac);color:var(--on)}
+.rk{font-size:19px;font-weight:700;margin-top:10px}
+.stats{display:flex;gap:8px}.stat{flex:1;text-align:center;padding:10px 6px}.stat b{display:block;font-size:25px}.stat small{color:var(--mute)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.med{text-align:center;padding:12px 4px}.med span{display:block;font-size:34px}.med.lk{opacity:.35;filter:grayscale(1)}.med small{color:var(--mute)}
+.tl{border-inline-start:3px solid var(--line);padding-inline-start:14px;margin-inline-start:8px}.ev{position:relative;margin-bottom:12px}.ev::before{content:"";position:absolute;inset-inline-start:-23px;top:8px;width:11px;height:11px;border-radius:50%;background:var(--ac)}.ev.s::before{background:var(--red)}.ev small{color:var(--mute);display:block}
+input,textarea{font:inherit;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:12px;padding:11px;width:100%}
+.row{display:flex;gap:8px;margin-bottom:10px}.row input[type=time]{width:115px;flex:none}.row button{flex:none}
+.task{display:flex;align-items:center;gap:10px}.task.d span{text-decoration:line-through;color:var(--mute)}.task input{width:22px;height:22px;flex:none}.task span{flex:1}.task button{padding:4px 10px;color:var(--mute)}
+.moods{display:flex;gap:8px}.moods button{flex:1;border:1px solid var(--line);font-size:25px;padding:9px 0}.moods button[aria-pressed="true"]{border-color:var(--ac);box-shadow:0 0 0 2px var(--ac)}
+#log{display:flex;flex-direction:column;gap:8px;margin-bottom:10px}.b{padding:10px 13px;border-radius:14px;white-space:pre-wrap;max-width:92%}.b.u{background:var(--ac);color:var(--on);align-self:flex-start}.b.a{background:var(--card);border:1px solid var(--line);align-self:flex-end}
+.chips{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px}.chips button{border:1px solid var(--line);font-weight:500;font-size:15px;padding:7px 12px;border-radius:99px}
+details{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:11px 15px;margin-bottom:10px}summary{font-weight:700;cursor:pointer}details p,details li{color:var(--mute);margin:8px 0 0}details ul{padding-inline-start:20px;margin:0}
+nav{position:fixed;inset:auto 0 0 0;background:var(--card);border-top:1px solid var(--line);display:flex;padding:6px 6px calc(6px + env(safe-area-inset-bottom,0px));z-index:4}
+nav button{flex:1;background:none;font-size:12px;font-weight:500;color:var(--mute);padding:5px 0;border-radius:10px}nav button span{display:block;font-size:21px}nav button.on{color:var(--ac);font-weight:800}
+.ov{position:fixed;inset:0;background:var(--bg);z-index:6;display:none;overflow-y:auto;padding:calc(20px + env(safe-area-inset-top,0px)) 18px calc(30px + env(safe-area-inset-bottom,0px))}.ov.on{display:block}
+.in{max-width:480px;margin:0 auto;text-align:center}.br{width:150px;height:150px;border-radius:50%;margin:18px auto 8px;background:var(--ac);opacity:.85;animation:br 14s ease-in-out infinite}
+@keyframes br{0%{transform:scale(.55)}29%,57%{transform:scale(1)}100%{transform:scale(.55)}}
+@media (prefers-reduced-motion:reduce){.br{animation:none;transform:scale(.8)}.pr{transition:none}}
+.ph{font-size:24px;font-weight:700;min-height:38px}.tm{font-size:34px;font-weight:800;font-variant-numeric:tabular-nums}
+ul.do{text-align:right;list-style:none;padding:0;margin:14px 0 18px}ul.do li{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 14px;margin-bottom:8px}
+.note{color:var(--mute);font-size:14px;text-align:center}
+</style></head><body>
+<main>
+<section class="sec on" id="t-home">
+  <h1>صحوة</h1><p class="sub">رحلتك يوم بعد يوم، بهدوء وبدون جلد للذات.</p>
+  <div class="card" id="startbox" style="display:none;text-align:center"><h2 style="margin-top:6px">جاهز تبدأ رحلتك؟ 🚀</h2><p class="mute">العدّاد هيبدأ من اللحظة اللي تدوس فيها.</p><button class="pri w" id="startnow">▶ ابدأ العدّاد الآن</button>
+    <p class="mute" style="margin:14px 0 6px">أو بدأت من قبل؟ اختار التاريخ:</p><input type="date" id="startd"><button class="ghost w" id="startpast" style="margin-top:8px">ابدأ من التاريخ ده</button></div>
+  <div class="hero" aria-live="polite"><div class="ring"><svg viewBox="0 0 200 200" aria-hidden="true"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" style="stop-color:var(--ac)"/><stop offset="1" style="stop-color:var(--ac2)"/></linearGradient></defs><circle class="tr" cx="100" cy="100" r="90"/><circle class="pr" id="pr" cx="100" cy="100" r="90" stroke-dasharray="565.5" stroke-dashoffset="565.5"/></svg>
+  <div class="ctr"><div class="days" id="days">0</div><div class="mute">يوم</div></div></div><div class="tbs"><div class="tb"><b id="th">0</b><small>ساعة</small></div><div class="tb"><b id="tmn">0</b><small>دقيقة</small></div><div class="tb"><b id="tsc">0</b><small>ثانية</small></div></div>
+  <div class="rk" id="rk"></div><div class="mute" id="nx"></div></div>
+  <button class="pri w" id="ci" style="margin-bottom:8px">كيف كان يومك؟</button>
+  <button class="sos w" id="sosb">النجدة: أنا حاسس بالرغبة</button>
+  <h2>تحدّي النهارده</h2><label class="card" style="display:flex;gap:10px;align-items:center"><input type="checkbox" id="chk" style="width:22px;height:22px;flex:none"><span id="chl"></span></label>
+  <h2>مزاجك</h2><div class="moods" id="moods" role="group" aria-label="مزاجك"><button data-m="1">😞</button><button data-m="2">😕</button><button data-m="3">😐</button><button data-m="4">🙂</button><button data-m="5">😄</button></div>
+  <p class="card" id="msg" style="text-align:center;margin-top:14px"></p>
+</section>
+
+<section class="sec" id="t-trip">
+  <h1>رحلتي</h1><p class="sub">أرقامك وأحداث رحلتك.</p>
+  <div class="stats"><div class="card stat"><b id="s1">0</b><small>أيام نظيفة</small></div><div class="card stat"><b id="s2">0</b><small>أطول فترة</small></div><div class="card stat"><b id="s3">0</b><small>زلات</small></div><div class="card stat"><b id="s4">0</b><small>تسجيلات</small></div></div>
+  <h2>أوقات الخطر والمحفّزات</h2><div class="card" id="ins"></div>
+  <h2>أحداث الرحلة</h2><div class="tl" id="tl"></div>
+</section>
+
+<section class="sec" id="t-ach">
+  <h1>الإنجازات</h1><p class="sub">كل رتبة تفتح بعد عدد أيام معيّن.</p><div class="grid" id="meds"></div>
+</section>
+
+<section class="sec" id="t-ai">
+  <h1>العبد لله 🤖</h1><p class="sub">مساعدك الذكي: بيرتّب يومك ويعمل جدولك ويسندك وقت الرغبة. مش بديل لإنسان تثق فيه.</p>
+  <div class="chips"><button data-q="أنا مضغوط ومحتاج مساعدة دلوقتي">أنا مضغوط</button><button id="bp">اعمل لي جدول</button><button data-q="إيه أكتر أوقات رغبتي وأعمل إيه فيها؟">أوقات الخطر</button></div>
+  <div id="log"></div><textarea id="q" rows="2" placeholder="اكتب هنا…" aria-label="رسالتك"></textarea>
+  <button class="pri w" id="send" style="margin-top:8px">ابعت</button><p class="note" id="aiN"></p>
+</section>
+
+<section class="sec" id="t-more">
+  <h1>المزيد</h1>
+  <details><summary>خطتي الشخصية (مهم)</summary><div style="margin-top:10px"><p class="mute" style="margin-top:0">خطة الوقاية من الانتكاس: بتبقى جاهزة قدامك وقت النجدة.</p>
+    <label class="mute">ليه بدأت رحلتك؟</label><textarea id="pw" rows="2"></textarea><label class="mute">المواقف الخطرة عندي</label><textarea id="pt" rows="2" placeholder="سهر، وحدة، موبايل في السرير، ضغط…"></textarea>
+    <label class="mute">لو حصل كذا هعمل كذا</label><textarea id="pi" rows="2" placeholder="لو قعدت لوحدي بالليل بالموبايل، هقوم أتوضّى وأسيب الموبايل بره الأوضة"></textarea>
+    <label class="mute">شخص أكلمه وقت الشدة</label><input id="pp"><button class="pri w" id="psv" style="margin-top:8px">احفظ خطتي</button></div></details>
+  <details open><summary>جدولي</summary><div style="margin-top:10px"><div class="row"><input type="time" id="tt" aria-label="الوقت"><input id="tx" placeholder="مثلا: مذاكرة جافاسكربت" aria-label="المهمة"><button class="pri" id="add">أضف</button></div><div id="tasks"></div><button class="pri w" id="plan">خلّي المساعد يرتّب يومي</button></div></details>
+  <details><summary>عاداتي البديلة</summary><div style="margin-top:10px"><p class="mute" style="margin-top:0">استبدل العادة السلبية بعادات إيجابية وتابعها يوميا.</p><div class="row"><input id="hn" placeholder="مثلا: رياضة 20 دقيقة" aria-label="العادة"><button class="pri" id="hadd">أضف</button></div><div id="hl"></div></div></details>
+  <details><summary>يومياتي</summary><div style="margin-top:10px"><textarea id="jt" rows="3" placeholder="اكتب اللي حاسس بيه النهارده…"></textarea><button class="pri w" id="js" style="margin:8px 0">احفظ</button><div id="jl"></div></div></details>
+  <details><summary>اتعلّم</summary>
+    <p><b>الدوبامين والتوقّع:</b> الدماغ بيفرز الدوبامين وقت التوقّع مش بس الفعل، فالمحفّزات (الموبايل، الوحدة، الملل) بتشعل الرغبة. تقليلها أسهل من مقاومتها.</p>
+    <p><b>موجة الرغبة:</b> الباحث آلان مارلات وصف "ركوب الموجة": الرغبة بتعلى وتهدى لوحدها لو ما اتغذّتش.</p>
+    <p><b>القشرة الجبهية:</b> المسؤولة عن كبح الاندفاع، وبتضعف مع قلة النوم والتوتر. النوم بدري جزء من العلاج.</p>
+    <p><b>المرونة العصبية:</b> كل مرة بتختار فيها بديل، المسار القديم بيضعف والجديد بيقوى.</p>
+    <p><b>HALT:</b> الأخطر لما تكون جعان، غضبان، وحيد، أو تعبان. عالج الحالة الأول.</p>
+    <p><b>الزلة:</b> شائعة في مسار التعافي، واللي بيفرق سرعة الرجوع. جلد الذات بيرجّع الدورة.</p></details>
+  <details><summary>آيات تثبّتك</summary><ul><li>﴿إِنَّ اللَّهَ يُحِبُّ التَّوَّابِينَ وَيُحِبُّ الْمُتَطَهِّرِينَ﴾ (البقرة 222)</li><li>﴿لَا تَقْنَطُوا مِن رَّحْمَةِ اللَّهِ﴾ (الزمر 53)</li><li>﴿وَالَّذِينَ جَاهَدُوا فِينَا لَنَهْدِيَنَّهُمْ سُبُلَنَا﴾ (العنكبوت 69)</li><li>﴿وَمَن يَتَّقِ اللَّهَ يَجْعَل لَّهُ مَخْرَجًا﴾ (الطلاق 2)</li><li>﴿أَلَا بِذِكْرِ اللَّهِ تَطْمَئِنُّ الْقُلُوبُ﴾ (الرعد 28)</li><li>﴿قُل لِّلْمُؤْمِنِينَ يَغُضُّوا مِنْ أَبْصَارِهِمْ وَيَحْفَظُوا فُرُوجَهُمْ﴾ (النور 30)</li></ul></details>
+  <details><summary>تجارب المتعافين (خلاصة)</summary><ul><li>الخطر الأكبر في الوحدة والسهر والموبايل في السرير.</li><li>الروتين أنقذهم: نوم بدري ورياضة وشغل وصلاة في وقتها.</li><li>الصراحة مع شخص موثوق خفّفت الإحساس بالعار.</li><li>الزلة كانت درس عن محفّز لازم يتظبّط.</li></ul><p class="note">مواضيع متكررة، مش اقتباسات حرفية.</p></details>
+  <details><summary>الإعدادات</summary><div style="margin-top:10px"><label class="mute">شكل العدّاد</label><div class="row" style="margin-top:6px"><button class="ghost w" id="sty1">حلقة</button><button class="ghost w" id="sty2">رقم كبير</button></div><label class="mute">تاريخ بداية العدّاد</label><input type="date" id="sd"><button class="pri w" id="sdb" style="margin:8px 0">احفظ التاريخ</button>
+    <button class="ghost w bad" id="slip" style="margin-bottom:8px">سجّل زلة</button><button class="ghost w bad" id="wipe">مسح كل البيانات</button><p class="note" id="sync"></p></div></details>
+</section>
+</main>
+
+<nav><button data-t="home" class="on"><span>🌱</span>الرئيسية</button><button data-t="trip"><span>🧭</span>رحلتي</button><button data-t="ach"><span>🏅</span>إنجازات</button><button data-t="ai"><span>💬</span>المساعد</button><button data-t="more"><span>☰</span>المزيد</button></nav>
+
+<div class="ov" id="ck"><div class="in"><h1>كيف كان يومك؟</h1><p class="sub" id="ckm">كن صادق مع نفسك، مفيش حكم هنا.</p>
+  <button class="pri w" id="ckok" style="margin-bottom:10px">✅ يوم نظيف</button><button class="ghost w" id="ckbad" style="margin-bottom:10px">حصلت زلة</button><button class="ghost w" id="ckx">إغلاق</button></div></div>
+<div class="ov" id="rf"><div class="in"><h1>الزلة حدث مش هوية</h1><p class="sub">وقعت في موقف صعب، ومش معناها إنك فاشل. نفهم اللي حصل ونرجع أقوى.</p>
+  <p class="mute">إيه اللي كان حواليك؟</p><div class="chips" id="rfc" style="justify-content:center"></div><textarea id="rfn" rows="3" placeholder="هعمل إيه مختلف المرة الجاية؟"></textarea>
+  <button class="pri w" id="rfs" style="margin:8px 0">احفظ وكمّل</button><button class="ghost w" id="rfx">تخطّي</button></div></div>
+<div class="ov" id="urge" role="dialog" aria-modal="true"><div class="in"><h1>الرغبة موجة وهتعدّي</h1><p class="sub">نفّس معايا وماتحاربهاش، بس استنّى.</p>
+  <div class="br" aria-hidden="true"></div><div class="ph" id="ph">شهيق…</div><div class="tm" id="tm">10:00</div>
+  <div class="card" id="uplan" style="text-align:right;display:none"></div>
+  <ul class="do"><li>قم وغيّر الأوضة دلوقتي.</li><li>اتوضّى وصلّي ركعتين أو اذكر ربنا دقيقتين.</li><li>ابعد الموبايل عن السرير والحمّام.</li><li>افتح تمرين برمجة صغير 10 دقايق.</li><li>كلّم حد قريب أو اطلع تمشي برّه.</li></ul>
+  <button class="pri w" id="uok" style="margin-bottom:8px">عدّيت، الحمد لله</button><button class="ghost w" id="uai">كلّم العبد لله</button></div></div>
+
+<script>
+(function(){
+var KEY="sahwa-v1",DAY=864e5,doc=null,sf=null,hist=[];
+var R=[[0,"المبتدئ","🌱"],[3,"المثابر","🌿"],[7,"الصامد","🍀"],[14,"الحارس","🛡️"],[21,"الفارس","⚔️"],[30,"القائد","🌙"],[60,"المجاهد","🔥"],[90,"البطل","💎"],[180,"الحكيم","👑"],[365,"المتحرر","🕊️"]];
+var CH=["اقرأ صفحة من القرآن بتدبّر","اكتب 10 أسطر كود من غير نسخ","امشِ 15 دقيقة برّه","نام قبل 12 بالليل وموبايلك بعيد","كلّم حد من أهلك أو صحابك","حل مسألة برمجة واحدة","اشرب مية وارتّب مكان مذاكرتك","اقعد 5 دقايق ذكر أو تأمّل بدون موبايل"];
+var MS=["كل يوم بتعدّيه هو فوز حقيقي.","إنت أقوى من لحظة الرغبة، هي بتعدّي.","التزامك بيرجّعلك تركيزك وسلامك مع ربنا.","لو وقعت، قوم تاني. ربنا بيحب التوّابين."];
+function dflt(){return{started:false,lastTs:0,plan:{},refl:[],style:"ring",habits:[],start:Date.now(),best:0,slips:[],checks:{},ch:{},moods:{},tasks:[],urges:[],jr:[],last:""}}
+var st=dflt();
+function merge(o){if(o&&o.start){for(var k in st)if(o[k]!==undefined)st[k]=o[k]}}
+try{merge(JSON.parse(localStorage.getItem(KEY)))}catch(e){}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(st))}catch(e){}if(doc){try{doc.set({json:JSON.stringify(st)}).catch(function(){})}catch(e){}}}
+function $(i){return document.getElementById(i)}
+function dk(d){return new Date(d).toLocaleDateString("en-CA")}
+function days(){return st.started?Math.floor((Date.now()-st.start)/DAY):0}
+function rank(d){var r=R[0];R.forEach(function(x){if(d>=x[0])r=x});return r}
+function mk(t,c,x){var e=document.createElement(t);if(c)e.className=c;if(x!==undefined)e.textContent=x;return e}
+function render(){var sh=st.started;document.querySelector(".hero").style.display=sh?"":"none";$("ci").style.display=sh?"":"none";$("startbox").style.display=sh?"none":"block";
+  var d=days(),ms=Date.now()-st.start,rk=rank(d),nx=R.find(function(x){return x[0]>d}),t=dk(Date.now()),b=Math.max(st.best,d);
+  $("days").textContent=d;clock();document.querySelector(".ring").className="ring"+(st.style==="big"?" big":"");
+  $("pr").style.strokeDashoffset=565.5*(1-(nx?Math.min(d/nx[0],1):1));
+  $("rk").textContent=rk[2]+" "+rk[1];$("nx").textContent=nx?"الرتبة الجاية: "+nx[1]+" بعد "+(nx[0]-d)+" يوم":"وصلت لأعلى رتبة";
+  $("msg").textContent=MS[(d+new Date().getDate())%MS.length];
+  var c=CH[(d+new Date().getDate())%CH.length];$("chl").textContent=c;$("chk").checked=!!st.ch[t];
+  document.querySelectorAll("#moods button").forEach(function(x){x.setAttribute("aria-pressed",String(st.moods[t]==x.dataset.m))});
+  $("s1").textContent=d;$("s2").textContent=b;$("s3").textContent=st.slips.length;$("s4").textContent=Object.keys(st.checks).length;
+  var ev=[{ts:st.start,x:"بداية الرحلة الحالية",s:0}];
+  R.forEach(function(x){if(x[0]>0&&d>=x[0])ev.push({ts:st.start+x[0]*DAY,x:"رتبة "+x[1]+" "+x[2],s:0})});
+  st.slips.forEach(function(s){ev.push({ts:s,x:"زلة",s:1})});
+  ev.sort(function(a,b){return b.ts-a.ts});var tl=$("tl");tl.textContent="";
+  ev.slice(0,40).forEach(function(e){var r=mk("div","ev"+(e.s?" s":""),e.x);r.append(mk("small","",dk(e.ts)));tl.append(r)});
+  var m=$("meds");m.textContent="";R.forEach(function(x){if(!x[0])return;var k=mk("div","card med"+(b>=x[0]?"":" lk"));k.append(mk("span","",x[2]),mk("b","",x[1]),mk("small","",x[0]+" يوم"));m.append(k)});
+  tasks();jr();hab();ins();$("sd").value=dk(st.start);
+}
+function clock(){var m=st.started?Date.now()-st.start:0;$("th").textContent=Math.floor(m%DAY/36e5);$("tmn").textContent=Math.floor(m%36e5/6e4);$("tsc").textContent=Math.floor(m%6e4/1e3);ciLabel()}
+function hab(){var c=$("hl");c.textContent="";var t=dk(Date.now());st.habits.forEach(function(h){var s=0,x=Date.now();if(!h.d[dk(x)])x-=DAY;while(h.d[dk(x)]){s++;x-=DAY}
+  var r=mk("div","card task"),cb=document.createElement("input");cb.type="checkbox";cb.checked=!!h.d[t];cb.setAttribute("aria-label","تم النهارده");cb.onchange=function(){if(cb.checked)h.d[t]=1;else delete h.d[t];save();hab()};
+  var b=mk("button","","حذف");b.onclick=function(){st.habits=st.habits.filter(function(y){return y!==h});save();hab()};r.append(cb,mk("span","",h.n),mk("small","mute",s?"🔥 "+s:""),b);c.append(r)})}
+function tasks(){var c=$("tasks");c.textContent="";st.tasks.slice().sort(function(a,b){return (a.time||"").localeCompare(b.time||"")}).forEach(function(k){
+  var r=mk("div","card task"+(k.done?" d":"")),cb=document.createElement("input");cb.type="checkbox";cb.checked=!!k.done;cb.setAttribute("aria-label","تم");cb.onchange=function(){k.done=cb.checked;save();tasks()};
+  var x=mk("button","","حذف");x.onclick=function(){st.tasks=st.tasks.filter(function(y){return y!==k});save();tasks()};r.append(cb,mk("span","",k.text),mk("small","mute",k.time||""),x);c.append(r)})}
+function jr(){var c=$("jl");c.textContent="";st.jr.slice().reverse().slice(0,20).forEach(function(j){var r=mk("div","card",j.t);r.append(mk("small","mute",dk(j.d)));r.firstChild.nodeValue=j.t;c.append(r)})}
+function go(t){document.querySelectorAll(".sec").forEach(function(s){s.className="sec"+(s.id==="t-"+t?" on":"")});document.querySelectorAll("nav button").forEach(function(n){n.className=n.dataset.t===t?"on":""});window.scrollTo(0,0)}
+document.querySelectorAll("nav button").forEach(function(b){b.onclick=function(){go(b.dataset.t)}});
+document.querySelectorAll("#moods button").forEach(function(b){b.onclick=function(){st.moods[dk(Date.now())]=b.dataset.m;save();render()}});
+$("chk").onchange=function(){st.ch[dk(Date.now())]=$("chk").checked;save()};
+function slip(){st.best=Math.max(st.best,days());st.slips.push(Date.now());st.start=Date.now();st.lastTs=Date.now();save();render();openRf()}
+var TR=["جعان","غضبان","وحيد","تعبان","ملل","سهر","الموبايل","ضغط"],trg="";
+function openRf(){trg="";$("rfn").value="";var c=$("rfc");c.textContent="";TR.forEach(function(x){var b=mk("button","",x);b.onclick=function(){trg=trg===x?"":x;c.querySelectorAll("button").forEach(function(y){y.className=y.textContent===trg?"on":""})};c.append(b)});$("rf").className="ov on"}
+$("rfs").onclick=function(){st.refl.push({d:Date.now(),t:trg,n:$("rfn").value.trim()});st.refl=st.refl.slice(-50);save();$("rf").className="ov";render()};
+$("rfx").onclick=function(){$("rf").className="ov"};
+function ins(){var c=$("ins");c.textContent="";var B=[0,0,0,0],N=["فجر (12–6 ص)","صباح (6–12)","ظهر وعصر (12–6 م)","مساء وليل (6–12)"],all=st.urges.concat(st.slips);
+  all.forEach(function(x){B[Math.floor(new Date(x).getHours()/6)]++});var m=Math.max.apply(null,B),tc={};st.refl.forEach(function(r){if(r.t)tc[r.t]=(tc[r.t]||0)+1});var tk=Object.keys(tc).sort(function(a,b){return tc[b]-tc[a]}).slice(0,3);
+  if(!all.length&&!tk.length){c.append(mk("span","mute","لسه مفيش بيانات كفاية. كل ما تسجّل رغبة أو زلة، هتظهر هنا أوقاتك الخطرة ومحفّزاتك."));return}
+  B.forEach(function(v,i){c.append(mk("small","mute",N[i]+" ("+v+")"));var b=mk("div","bar");b.style.width=(m?Math.max(v/m*100,3):3)+"%";c.append(b)});
+  if(tk.length)c.append(mk("div","","أكتر محفّزاتك: "+tk.join("، ")))}
+function planFill(){var p=st.plan||{};$("pw").value=p.why||"";$("pt").value=p.trig||"";$("pi").value=p.ifthen||"";$("pp").value=p.who||""}
+$("psv").onclick=function(){st.plan={why:$("pw").value.trim(),trig:$("pt").value.trim(),ifthen:$("pi").value.trim(),who:$("pp").value.trim()};save()};
+function uplan(){var c=$("uplan"),p=st.plan||{};c.textContent="";var n=0;[["ليه بدأت: ",p.why],["خطتي: ",p.ifthen],["كلّم: ",p.who]].forEach(function(x){if(x[1]){n++;var d=mk("div","");d.append(mk("b","",x[0]),document.createTextNode(x[1]));c.append(d)}});c.style.display=n?"block":"none"}
+$("ci").onclick=function(){if(Date.now()<(st.lastTs||0)+DAY)return;$("ckm").textContent="كن صادق مع نفسك، مفيش حكم هنا. التسجيل مرة كل 24 ساعة.";$("ck").className="ov on"};
+$("ckx").onclick=function(){$("ck").className="ov"};
+$("ckok").onclick=function(){st.checks[dk(Date.now())]=1;st.lastTs=Date.now();save();$("ck").className="ov";render();ciLabel();boom();$("msg").textContent="تمام، يوم نظيف اتسجّل. كمّل. 💚"};
+$("ckbad").onclick=function(){slip();$("ck").className="ov";$("msg").textContent="مفيش مشكلة. الشاطر اللي بيقوم تاني. النهارده بداية جديدة."};
+function two(b,l,fn){var t;b.onclick=function(){if(b.dataset.c!=="1"){b.dataset.c="1";b.textContent="اضغط تاني للتأكيد";clearTimeout(t);t=setTimeout(function(){b.dataset.c="";b.textContent=l},4000);return}b.dataset.c="";b.textContent=l;fn()}}
+two($("slip"),"سجّل زلة",slip);
+two($("wipe"),"مسح كل البيانات",function(){st=dflt();save();render()});
+$("sdb").onclick=function(){var v=$("sd").value;if(!v)return;var d=new Date(v+"T00:00:00").getTime();if(d&&d<=Date.now()){st.start=d;save();render()}};
+$("add").onclick=function(){var v=$("tx").value.trim();if(!v)return;st.tasks.push({text:v,time:$("tt").value,done:false});$("tx").value="";save();tasks()};
+$("hadd").onclick=function(){var v=$("hn").value.trim();if(!v)return;st.habits.push({n:v,d:{}});$("hn").value="";save();hab()};
+$("sty1").onclick=function(){st.style="ring";save();render()};$("sty2").onclick=function(){st.style="big";save();render()};
+$("js").onclick=function(){var v=$("jt").value.trim();if(!v)return;st.jr.push({t:v,d:Date.now()});st.jr=st.jr.slice(-100);$("jt").value="";save();jr()};
+var bi,ti,end;function tick(){var r=Math.max(0,end-Date.now());$("tm").textContent=r?String(Math.floor(r/6e4)).padStart(2,"0")+":"+String(Math.floor(r%6e4/1e3)).padStart(2,"0"):"عدّت الموجة 💚"}
+function ucl(){clearInterval(bi);clearInterval(ti);$("urge").className="ov";document.body.style.overflow=""}
+$("sosb").onclick=function(){uplan();$("urge").className="ov on";document.body.style.overflow="hidden";end=Date.now()+6e5;var t0=Date.now();bi=setInterval(function(){var c=((Date.now()-t0)/1e3)%14;$("ph").textContent=c<4?"شهيق…":c<8?"ثبّت…":"زفير ببطء…"},250);ti=setInterval(tick,500);tick()};
+$("uok").onclick=function(){ucl();st.urges.push(Date.now());st.urges=st.urges.slice(-60);save();render()};
+$("uai").onclick=function(){ucl();go("ai");ask("أنا حاسس بالرغبة دلوقتي وعايز مساعدة")};
+function ctx(){var h={};st.urges.forEach(function(u){var x=new Date(u).getHours();h[x]=(h[x]||0)+1});var top=Object.keys(h).sort(function(a,b){return h[b]-h[a]}).slice(0,3).join("، ");
+  var tk=st.tasks.map(function(k){return (k.time||"--")+" "+k.text+(k.done?" (تم)":"")}).join("\n")||"لا يوجد";
+  return "الأيام الحالية: "+days()+"، الرتبة: "+rank(days())[1]+"، عدد الزلات: "+st.slips.length+"\nأكثر ساعات الرغبة: "+(top||"غير معروف")+"\nسبب التعافي: "+((st.plan||{}).why||"-")+"\nالمحفزات التي ذكرها: "+((st.plan||{}).trig||"-")+"\nجدول اليوم:\n"+tk}
+var SYS="أنت «العبد لله»، مساعد ذكي وداعم لشاب مصري مبتدئ في البرمجة يتعافى من عادة قهرية ويريد التزامًا دينيًا وتركيزًا في مذاكرته. تكلّم بالعامية المصرية بدفء وبدون وعظ أو لوم. ساعده في تنظيم جدوله وتقليل الفراغ والمحفزات (سهر، موبايل في السرير) وبخطوات عملية للحظة الرغبة. عند الزلة شجّعه على الرجوع فورًا. ردودك قصيرة (5 جمل تقريبًا). لا تقدّم تشخيصًا طبيًا، وشجّعه أحيانًا على الكلام مع شخص موثوق أو مختص، وإن ذكر إيذاء النفس فوجّهه فورًا لطلب مساعدة عاجلة.";
+function bub(c,t){var d=mk("div","b "+c,t);$("log").append(d);return d}var busy=false;
+function ask(text){if(busy||!text)return;if(!sf){$("aiN").textContent="المساعد مش متاح في النسخة دي.";return}
+  go("ai");busy=true;bub("u",text);hist.push("المستخدم: "+text);var a=bub("a","…");
+  sf(SYS+"\n\n"+ctx()+"\n\nالمحادثة:\n"+hist.slice(-10).join("\n")+"\nالمساعد:",{cache:false,onText:function(o){a.textContent=o.text}}).then(function(r){a.textContent=r.text;hist.push("المساعد: "+r.text)})
+  .catch(function(e){a.textContent=e&&e.code==="not_granted"?"محتاج توافق على استخدام المساعد عشان يشتغل.":"حصلت مشكلة، جرّب تاني بعد شوية."}).then(function(){busy=false})}
+$("send").onclick=function(){var v=$("q").value.trim();$("q").value="";ask(v)};
+document.querySelectorAll(".chips button").forEach(function(b){b.onclick=function(){ask(b.dataset.q)}});
+$("plan").onclick=function(){buildPlan()};
+function buildPlan(){if(busy)return;if(!sf){$("aiN").textContent="العبد لله مش متاح في النسخة دي.";return}
+ go("ai");busy=true;bub("u","اعمل لي جدول لليوم");var a=bub("a","بجهّز جدولك…");
+ var p=SYS+"\n\n"+ctx()+"\n\nمهمتك: ارجع جدول يوم واحد بصيغة JSON فقط بدون أي شرح وبدون علامات كود، على شكل مصفوفة: [{\"time\":\"HH:MM\",\"text\":\"...\"}] من 7 إلى 10 بنود، تشمل الصلوات ومذاكرة برمجة ورياضة وراحة وملء أوقات الخطر عندي ونوم مبكر. النصوص بالعامية المصرية وقصيرة.";
+ sf(p,{cache:false}).then(function(r){var s=r.text,i=s.indexOf("["),j=s.lastIndexOf("]"),arr=JSON.parse(s.slice(i,j+1)),n=0;
+  arr.forEach(function(x){if(x&&/^\d{1,2}:\d{2}$/.test(x.time)&&x.text){st.tasks.push({text:String(x.text).slice(0,80),time:x.time.length==4?"0"+x.time:x.time,done:false});n++}});
+  st.tasks=st.tasks.slice(-60);save();tasks();a.textContent="ضفتلك "+n+" بنود في جدولك (المزيد ← جدولي). عدّل أو احذف اللي مش مناسب.";hist.push("المساعد: عملت جدول اليوم")})
+ .catch(function(e){a.textContent=e&&e.code==="not_granted"?"محتاج توافق على استخدام العبد لله.":"معرفتش أجهّز الجدول، جرّب تاني."}).then(function(){busy=false})}
+$("bp").onclick=buildPlan;
+$("aiN").textContent="البحث على الإنترنت هيتفعّل لما نربط السيرفر.";
+function ciLabel(){var b=$("ci"),r=(st.lastTs||0)+DAY-Date.now();if(r>0){b.disabled=true;b.textContent="التسجيل الجاي بعد "+Math.floor(r/36e5)+" س "+Math.floor(r%36e5/6e4)+" د "+Math.floor(r%6e4/1e3)+" ث"}else{b.disabled=false;b.textContent="كيف كان يومك؟"}}
+function boom(){if(matchMedia("(prefers-reduced-motion:reduce)").matches)return;var E=["🎉","✨","💚","⭐","🌟"];for(var i=0;i<18;i++){var s=mk("span","cf",E[i%5]);s.style.left=Math.random()*94+"%";s.style.animationDelay=Math.random()*.6+"s";document.body.append(s);setTimeout(s.remove.bind(s),3400)}}
+$("startd").value=dk(Date.now());
+$("startnow").onclick=function(){st.started=true;st.start=Date.now();save();render();boom()};
+$("startpast").onclick=function(){var d=new Date($("startd").value+"T00:00:00").getTime();if(!d||d>Date.now())return;st.started=true;st.start=d;save();render();boom()};
+$("sync").textContent="محفوظ على الجهاز ده فقط.";planFill();render();setInterval(render,3e4);setInterval(clock,1000);
+(async function(){try{if(!window.claude)return;var sm=await claude.use("sample");if(sm)sf=sm;
+  var u=await claude.use("user"),d=await claude.use("db");if(!u||!d)return;var id=await u.id();if(!id)return;
+  doc=d.collection("data/users/"+id).doc("state");var s=await doc.get();
+  if(s.exists&&s.data().json){merge(JSON.parse(s.data().json));planFill();try{localStorage.setItem(KEY,JSON.stringify(st))}catch(e){}render()}else save();
+  $("sync").textContent="محفوظ على حسابك وبتقدر تفتحه من أي جهاز."}catch(e){}})();
+})();
+</script></body></html>
